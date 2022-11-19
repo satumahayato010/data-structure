@@ -59,15 +59,27 @@ func (l *LinkedList) remove(data any) {
 	currentNode = nil
 }
 
+func (l *LinkedList) reverseIterative() {
+	var previousNode *Node = nil
+	currentNode := l.head
+	for currentNode != nil {
+		nextNode := currentNode.next
+		currentNode.next = previousNode
+
+		previousNode = currentNode
+		currentNode = nextNode
+	}
+	l.head = previousNode
+}
+
 func main() {
 	l := &LinkedList{}
+	l.insert(0)
 	l.append(1)
 	l.append(2)
 	l.append(3)
-	l.append(4)
-	l.insert(0)
 	l.print()
-	l.remove(5)
 	fmt.Println("###############")
+	l.reverseIterative()
 	l.print()
 }
