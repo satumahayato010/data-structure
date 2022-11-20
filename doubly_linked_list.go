@@ -1,8 +1,6 @@
 package main
 
-import "fmt"
-
-type Node struct {
+/*type Node struct {
 	data any
 	next *Node
 	prev *Node
@@ -109,3 +107,4 @@ func main() {
 	dl.reverseIterative()
 	dl.print()
 }
+*/
