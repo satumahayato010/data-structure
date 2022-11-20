@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-type Node struct {
+/*type Node struct {
 	data any
 	next *Node
-}
+}*/
 
 type LinkedList struct {
 	head *Node
